@@ -84,13 +84,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         myPicker.delegate = self
         myPicker.dataSource = self
-        podcastArray = ["Comedy Bang Bang", "This American Life", "Serial", "Get Played", "Superego", "James Bonding", "With Gourley and Rust", "The Neighborhood Listen", "Man Dog Pod"]
+//        podcastArray = ["Comedy Bang Bang", "This American Life", "Serial", "Get Played", "Superego", "James Bonding", "With Gourley and Rust", "The Neighborhood Listen", "Man Dog Pod"]
       
         roundEpisodedButton.layer.cornerRadius = roundEpisodedButton.frame.width / 2
         roundEpisodedButton.layer.masksToBounds = true
         
         
-        var podcasts = [Podcast(name: "Comedy Bang Bang", description: "A comedy Podcast", genre: "Comedy", coverArt: "", subscribed: true, dateAdded: "05.01.2009", episodes: [Episode(name: "Ep 1", audioFile: "" , episodeNumber: 1, description: "The First episode", episodeArt: "", length: 3500, currentPlay: 300, favorited: false),
+        podcasts = [Podcast(name: "Comedy Bang Bang", description: "A comedy Podcast", genre: "Comedy", coverArt: "", subscribed: true, dateAdded: "05.01.2009", episodes: [Episode(name: "Ep 1", audioFile: "" , episodeNumber: 1, description: "The First episode", episodeArt: "", length: 3500, currentPlay: 300, favorited: false),
             Episode(name: "Ep 2", audioFile: "" , episodeNumber: 2, description: "The Second episode", episodeArt: "", length: 3600, currentPlay: 3600, favorited: false),
             Episode(name: "Ep 3", audioFile: "" , episodeNumber: 3, description: "The Third episode", episodeArt: "", length: 4000, currentPlay: 4000, favorited: false)]),
                         
@@ -108,10 +108,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         ]
         
-        print(podcasts[1].name)
-        
-        
-        
+        print(podcasts.count)
         
         
         
@@ -143,7 +140,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     
     
-//    ------------- PICKER VIEW FUNCTIONS ----------
+//    ------------- PICKERVIEW FUNCTIONS -------------
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -152,6 +149,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
 //        return podcastArray.count
         return podcasts.count
+        
         
     }
     
@@ -166,14 +164,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             pickerLabel?.font = UIFont(name: "Futura Medium", size: 50)
             pickerLabel?.adjustsFontSizeToFitWidth = true;
             pickerLabel?.textAlignment = .left
-            
-        
+
+
         }
-        
+        pickerLabel?.text = podcasts[row].name
         pickerView.backgroundColor = backgroundColors.randomElement()
         pickerLabel?.numberOfLines = 0
 //        pickerLabel?.text = podcastArray[row].uppercased()
-        pickerLabel?.text = "podcasts[0].name"
+        
         
         pickerLabel?.textColor = UIColor.blue
 
@@ -197,19 +195,19 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 //
 //        self.present(alert, animated: true, completion: nil)
 //    }
-    
-    func pickerView(_ pickerView: UIPickerView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {
-            (contextualAction, view, boolValue) in
-            self.podcastArray.remove(at: indexPath.row)
-//            UserDefaults.standard.set(self.podArray, forKey: "myArray")
-        }
-        
-            let swipeActions = UISwipeActionsConfiguration(actions: [deleteAction])
-            return swipeActions
-            
-        }
+//
+//    func pickerView(_ pickerView: UIPickerView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//
+//        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {
+//            (contextualAction, view, boolValue) in
+//            self.podcastArray.remove(at: indexPath.row)
+////            UserDefaults.standard.set(self.podArray, forKey: "myArray")
+//        }
+//
+//            let swipeActions = UISwipeActionsConfiguration(actions: [deleteAction])
+//            return swipeActions
+//
+//        }
 
 
     
@@ -217,7 +215,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         let pickerIndex = myPicker.selectedRow(inComponent: 0)
-        pickerLabelToSend = "\(podcastArray[pickerIndex])"
+        pickerLabelToSend = "\(podcasts[pickerIndex].name)"
         performSegue(withIdentifier: "segueToEpisodes", sender: self)
 //        let alert = UIAlertController(title: "Your Choice", message: "\(pickerData[pickerIndex])", preferredStyle: .alert)
 //
