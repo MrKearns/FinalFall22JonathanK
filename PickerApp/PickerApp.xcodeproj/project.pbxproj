@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81092DB0290AF5B400EFEA6E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81092DAF290AF5B400EFEA6E /* TableViewCell.swift */; };
 		81207B0128FDEC7E00F48316 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81207B0028FDEC7E00F48316 /* EpisodeViewController.swift */; };
+		812CB743291430C00005C78C /* ColorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 812CB742291430C00005C78C /* ColorKit */; };
+		818AE2A6290ACE2100A974C9 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AE2A5290ACE2100A974C9 /* PlayerViewController.swift */; };
 		81C54B5E28D9089A00C3EC82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C54B5D28D9089A00C3EC82 /* AppDelegate.swift */; };
 		81C54B6028D9089A00C3EC82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C54B5F28D9089A00C3EC82 /* SceneDelegate.swift */; };
 		81C54B6228D9089A00C3EC82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C54B6128D9089A00C3EC82 /* ViewController.swift */; };
@@ -17,7 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81092DAF290AF5B400EFEA6E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		81207B0028FDEC7E00F48316 /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
+		818AE2A5290ACE2100A974C9 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		81C54B5A28D9089A00C3EC82 /* PickerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C54B5D28D9089A00C3EC82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81C54B5F28D9089A00C3EC82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812CB743291430C00005C78C /* ColorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,7 +48,6 @@
 		81C54B5128D9089A00C3EC82 = {
 			isa = PBXGroup;
 			children = (
-				81207B0028FDEC7E00F48316 /* EpisodeViewController.swift */,
 				81C54B5C28D9089A00C3EC82 /* PickerApp */,
 				81C54B5B28D9089A00C3EC82 /* Products */,
 			);
@@ -62,6 +67,9 @@
 				81C54B5D28D9089A00C3EC82 /* AppDelegate.swift */,
 				81C54B5F28D9089A00C3EC82 /* SceneDelegate.swift */,
 				81C54B6128D9089A00C3EC82 /* ViewController.swift */,
+				81207B0028FDEC7E00F48316 /* EpisodeViewController.swift */,
+				818AE2A5290ACE2100A974C9 /* PlayerViewController.swift */,
+				81092DAF290AF5B400EFEA6E /* TableViewCell.swift */,
 				81C54B6328D9089A00C3EC82 /* Main.storyboard */,
 				81C54B6628D9089B00C3EC82 /* Assets.xcassets */,
 				81C54B6828D9089B00C3EC82 /* LaunchScreen.storyboard */,
@@ -86,6 +94,9 @@
 			dependencies = (
 			);
 			name = PickerApp;
+			packageProductDependencies = (
+				812CB742291430C00005C78C /* ColorKit */,
+			);
 			productName = PickerApp;
 			productReference = 81C54B5A28D9089A00C3EC82 /* PickerApp.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 81C54B5128D9089A00C3EC82;
+			packageReferences = (
+				812CB741291430C00005C78C /* XCRemoteSwiftPackageReference "ColorKit" */,
+			);
 			productRefGroup = 81C54B5B28D9089A00C3EC82 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,7 +158,9 @@
 				81C54B6228D9089A00C3EC82 /* ViewController.swift in Sources */,
 				81C54B5E28D9089A00C3EC82 /* AppDelegate.swift in Sources */,
 				81207B0128FDEC7E00F48316 /* EpisodeViewController.swift in Sources */,
+				81092DB0290AF5B400EFEA6E /* TableViewCell.swift in Sources */,
 				81C54B6028D9089A00C3EC82 /* SceneDelegate.swift in Sources */,
+				818AE2A6290ACE2100A974C9 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		812CB741291430C00005C78C /* XCRemoteSwiftPackageReference "ColorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Boris-Em/ColorKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		812CB742291430C00005C78C /* ColorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 812CB741291430C00005C78C /* XCRemoteSwiftPackageReference "ColorKit" */;
+			productName = ColorKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 81C54B5228D9089A00C3EC82 /* Project object */;
 }
