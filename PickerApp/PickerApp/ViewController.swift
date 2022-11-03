@@ -139,7 +139,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     
     
-    //  ------------------- PREPARE FOR SEGUE -------------------
+    //  -------------------- PREPARE FOR SEGUE ---------------------
     
     override func prepare(for segueToEpisodes: UIStoryboardSegue, sender: Any?) {
        let episodesController = segueToEpisodes.destination as! EpisodeViewController

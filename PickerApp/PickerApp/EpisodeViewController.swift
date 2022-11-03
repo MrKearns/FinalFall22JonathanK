@@ -9,9 +9,9 @@ import UIKit
 import ColorKit
 
 class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
     
-//    ------------------ VARIABLES & CONSTANTS ----------------
+    
+    //    -------------------- VARIABLES & CONSTANTS ------------------
     @IBOutlet weak var topLabel: UILabel!
     
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -30,11 +30,11 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     
-  
     
     
     
-//    ------------------- VIEW DID LOAD --------------------
+    
+    //    -------------------- VIEW DID LOAD -----------------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,12 +48,12 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         episodesArray = unplayedEpisodesArray
         sortEpisodeButtonPressed()
         
-
+        
         // Do any additional setup after loading the view.
     }
     
     
-//    ------------------- TABLEVIEW FUNCTIONS ----------------
+    //    ------------------- TABLEVIEW FUNCTIONS ----------------
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         episodesArray.count
@@ -70,7 +70,21 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
-//    -----------------
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let markAsPlayed = UIContextualAction(style: .normal, title: "Played") {
+            (contextualAction, view, boolValue) in
+            self.episodesArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+        }
+        let swipeActions = UISwipeActionsConfiguration(actions: [markAsPlayed])
+        return swipeActions
+        
+    }
+
+    
+    
+    
+//    ----------------- SORT BUTTON / POP UP BUTTON FUNCTION --------------------
    
     func sortEpisodeButtonPressed() {
         let this = { [self](action: UIAction) in
@@ -87,11 +101,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
                 episodedTable.reloadData()
             }
             print(action.title)}
-        
-        
-        
     
-        
         sortEpisodesButton.menu = UIMenu(children: [
             UIAction(title: "Unplayed", state: .on, handler: this),
             UIAction(title: "Played", state: .on, handler: this),
@@ -100,6 +110,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
+//    -------------------- GET COLORS FROM IMAGE FUNCTINO ----------------
     
     func getImageAverageColor(){
         do{
@@ -108,7 +119,6 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
             topLabel.textColor = averageColor![1]
             descriptionLabel.textColor = averageColor![1]
             sortEpisodesButton.setTitleColor(averageColor![1], for: .normal)
-          
         }
         catch{
             print("color error")
