@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 // ------------------ PODCAST & EPISODE STRUCTS -----------------
 
@@ -106,19 +107,19 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         roundEpisodedButton.layer.masksToBounds = true
         
         
-        podcasts = [Podcast(name: "Comedy Bang Bang", description: "A comedy Podcast", genre: "Comedy", coverArt: "CBB", subscribed: true, dateAdded: "05.01.2009", episodes: [Episode(name: "CBB Ep 1", audioFile: "" , episodeNumber: 1, description: "The First episode", episodeArt: "", length: 3500, currentPlay: 300, favorited: false),
-            Episode(name: "CBB Ep 2", audioFile: "" , episodeNumber: 2, description: "The Second episode", episodeArt: "", length: 3600, currentPlay: 0, favorited: false),
-            Episode(name: "CBB Ep 3", audioFile: "" , episodeNumber: 3, description: "The Third episode", episodeArt: "", length: 4000, currentPlay: 4000, favorited: false)]),
+        podcasts = [Podcast(name: "Comedy Bang Bang", description: "A comedy Podcast", genre: "Comedy", coverArt: "CBB", subscribed: true, dateAdded: "05.01.2009", episodes: [Episode(name: "CBB Ep 1", audioFile: "Swearin' - Kenosha" , episodeNumber: 1, description: "The First episode", episodeArt: "", length: 3500, currentPlay: 300, favorited: false),
+            Episode(name: "CBB Ep 2", audioFile: "Ted Leo and The Pharmacists - Bottled in Cork" , episodeNumber: 2, description: "The Second episode", episodeArt: "", length: 3600, currentPlay: 0, favorited: false),
+            Episode(name: "CBB Ep 3", audioFile: "Tapes 'n Tapes - Crazy Eights" , episodeNumber: 3, description: "The Third episode", episodeArt: "", length: 4000, currentPlay: 4000, favorited: false)]),
                         
             Podcast(name: "This American Life", description: "Storytelling", genre: "Personal Stories", coverArt: "thisAmericanLife", subscribed: true, dateAdded: "05.01.2009", episodes:
-            [Episode(name: "TAL Ep 1", audioFile: "" , episodeNumber: 1, description: "The First episode", episodeArt: "", length: 3500, currentPlay: 300, favorited: false),
-            Episode(name: "TAL Ep 2", audioFile: "" , episodeNumber: 2, description: "The Second episode", episodeArt: "", length: 3600, currentPlay: 3600, favorited: false),
-            Episode(name: "TAL Ep 3", audioFile: "" , episodeNumber: 3, description: "The Third episode", episodeArt: "", length: 4000, currentPlay: 4000, favorited: false)]),
+            [Episode(name: "TAL Ep 1", audioFile: "The Coathangers - Copycat" , episodeNumber: 1, description: "The First episode", episodeArt: "", length: 3500, currentPlay: 300, favorited: false),
+            Episode(name: "TAL Ep 2", audioFile: "Devo - Gut Feeling_(Slap Your Mammy)" , episodeNumber: 2, description: "The Second episode", episodeArt: "", length: 3600, currentPlay: 3600, favorited: false),
+            Episode(name: "TAL Ep 3", audioFile: "03 - Magic Hour" , episodeNumber: 3, description: "The Third episode", episodeArt: "", length: 4000, currentPlay: 4000, favorited: false)]),
                         
             Podcast(name: "Serial", description: "Storytelling", genre: "True Crime", coverArt: "serial", subscribed: true, dateAdded: "05.01.2009", episodes:
-            [Episode(name: "S Ep 1", audioFile: "" , episodeNumber: 1, description: "The First episode", episodeArt: "", length: 3500, currentPlay: 0, favorited: false),
-            Episode(name: "S EP 2", audioFile: "" , episodeNumber: 2, description: "The Second episode", episodeArt: "", length: 3600, currentPlay: 0, favorited: false),
-            Episode(name: "S Ep 3", audioFile: "" , episodeNumber: 3, description: "The Third episode", episodeArt: "", length: 4000, currentPlay: 0, favorited: false)]),
+            [Episode(name: "S Ep 1", audioFile: "The Sex Pistols - Pretty Vacant" , episodeNumber: 1, description: "The First episode", episodeArt: "", length: 3500, currentPlay: 0, favorited: false),
+            Episode(name: "S EP 2", audioFile: "Tortoise - Tin Cans & Twine" , episodeNumber: 2, description: "The Second episode", episodeArt: "", length: 3600, currentPlay: 0, favorited: false),
+            Episode(name: "S Ep 3", audioFile: "07 - Staring at the Sun" , episodeNumber: 3, description: "The Third episode", episodeArt: "", length: 4000, currentPlay: 0, favorited: false)]),
         
         
         

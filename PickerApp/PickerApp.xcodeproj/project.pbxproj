@@ -11,18 +11,34 @@
 		81207B0128FDEC7E00F48316 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81207B0028FDEC7E00F48316 /* EpisodeViewController.swift */; };
 		812CB743291430C00005C78C /* ColorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 812CB742291430C00005C78C /* ColorKit */; };
 		818AE2A6290ACE2100A974C9 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818AE2A5290ACE2100A974C9 /* PlayerViewController.swift */; };
+		81AB2DB1291D847900D65DBD /* Tapes 'n Tapes - Crazy Eights.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 81AB2DB0291D847900D65DBD /* Tapes 'n Tapes - Crazy Eights.mp3 */; };
+		81AB2DB3291D84A800D65DBD /* The Coathangers - Copycat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 81AB2DB2291D84A800D65DBD /* The Coathangers - Copycat.mp3 */; };
+		81AB2DB5291D84FB00D65DBD /* Devo - Gut Feeling_(Slap Your Mammy).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 81AB2DB4291D84FB00D65DBD /* Devo - Gut Feeling_(Slap Your Mammy).mp3 */; };
+		81AB2DB7291D852600D65DBD /* 03 - Magic Hour.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 81AB2DB6291D852600D65DBD /* 03 - Magic Hour.mp3 */; };
+		81AB2DB9291D859A00D65DBD /* The Sex Pistols - Pretty Vacant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 81AB2DB8291D859A00D65DBD /* The Sex Pistols - Pretty Vacant.mp3 */; };
+		81AB2DBB291D860700D65DBD /* Tortoise - Tin Cans & Twine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 81AB2DBA291D860700D65DBD /* Tortoise - Tin Cans & Twine.mp3 */; };
+		81AB2DBD291D864100D65DBD /* 07 - Staring at the Sun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 81AB2DBC291D864100D65DBD /* 07 - Staring at the Sun.mp3 */; };
 		81C54B5E28D9089A00C3EC82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C54B5D28D9089A00C3EC82 /* AppDelegate.swift */; };
 		81C54B6028D9089A00C3EC82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C54B5F28D9089A00C3EC82 /* SceneDelegate.swift */; };
 		81C54B6228D9089A00C3EC82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C54B6128D9089A00C3EC82 /* ViewController.swift */; };
 		81C54B6528D9089A00C3EC82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C54B6328D9089A00C3EC82 /* Main.storyboard */; };
 		81C54B6728D9089B00C3EC82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C54B6628D9089B00C3EC82 /* Assets.xcassets */; };
 		81C54B6A28D9089B00C3EC82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C54B6828D9089B00C3EC82 /* LaunchScreen.storyboard */; };
+		81C79CCB291ACF08007ABD0C /* Swearin' - Kenosha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 81C79CCA291ACF08007ABD0C /* Swearin' - Kenosha.mp3 */; };
+		81C79CCD291AD697007ABD0C /* Ted Leo and The Pharmacists - Bottled in Cork.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 81C79CCC291AD697007ABD0C /* Ted Leo and The Pharmacists - Bottled in Cork.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		81092DAF290AF5B400EFEA6E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		81207B0028FDEC7E00F48316 /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
 		818AE2A5290ACE2100A974C9 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		81AB2DB0291D847900D65DBD /* Tapes 'n Tapes - Crazy Eights.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Tapes 'n Tapes - Crazy Eights.mp3"; sourceTree = "<group>"; };
+		81AB2DB2291D84A800D65DBD /* The Coathangers - Copycat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Coathangers - Copycat.mp3"; sourceTree = "<group>"; };
+		81AB2DB4291D84FB00D65DBD /* Devo - Gut Feeling_(Slap Your Mammy).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Devo - Gut Feeling_(Slap Your Mammy).mp3"; sourceTree = "<group>"; };
+		81AB2DB6291D852600D65DBD /* 03 - Magic Hour.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "03 - Magic Hour.mp3"; sourceTree = "<group>"; };
+		81AB2DB8291D859A00D65DBD /* The Sex Pistols - Pretty Vacant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Sex Pistols - Pretty Vacant.mp3"; sourceTree = "<group>"; };
+		81AB2DBA291D860700D65DBD /* Tortoise - Tin Cans & Twine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Tortoise - Tin Cans & Twine.mp3"; sourceTree = "<group>"; };
+		81AB2DBC291D864100D65DBD /* 07 - Staring at the Sun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "07 - Staring at the Sun.mp3"; sourceTree = "<group>"; };
 		81C54B5A28D9089A00C3EC82 /* PickerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C54B5D28D9089A00C3EC82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81C54B5F28D9089A00C3EC82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +47,9 @@
 		81C54B6628D9089B00C3EC82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81C54B6928D9089B00C3EC82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81C54B6B28D9089B00C3EC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81C79CCA291ACF08007ABD0C /* Swearin' - Kenosha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Swearin' - Kenosha.mp3"; sourceTree = "<group>"; };
+		81C79CCC291AD697007ABD0C /* Ted Leo and The Pharmacists - Bottled in Cork.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ted Leo and The Pharmacists - Bottled in Cork.mp3"; sourceTree = "<group>"; };
+		81C79CCE291AD766007ABD0C /* PickerApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PickerApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +64,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81AB2DAF291D846600D65DBD /* Audio Files */ = {
+			isa = PBXGroup;
+			children = (
+				81C79CCA291ACF08007ABD0C /* Swearin' - Kenosha.mp3 */,
+				81C79CCC291AD697007ABD0C /* Ted Leo and The Pharmacists - Bottled in Cork.mp3 */,
+				81AB2DB0291D847900D65DBD /* Tapes 'n Tapes - Crazy Eights.mp3 */,
+				81AB2DB2291D84A800D65DBD /* The Coathangers - Copycat.mp3 */,
+				81AB2DB4291D84FB00D65DBD /* Devo - Gut Feeling_(Slap Your Mammy).mp3 */,
+				81AB2DB6291D852600D65DBD /* 03 - Magic Hour.mp3 */,
+				81AB2DB8291D859A00D65DBD /* The Sex Pistols - Pretty Vacant.mp3 */,
+				81AB2DBA291D860700D65DBD /* Tortoise - Tin Cans & Twine.mp3 */,
+				81AB2DBC291D864100D65DBD /* 07 - Staring at the Sun.mp3 */,
+			);
+			path = "Audio Files";
+			sourceTree = "<group>";
+		};
 		81C54B5128D9089A00C3EC82 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +99,8 @@
 		81C54B5C28D9089A00C3EC82 /* PickerApp */ = {
 			isa = PBXGroup;
 			children = (
+				81C79CCE291AD766007ABD0C /* PickerApp.entitlements */,
+				81AB2DAF291D846600D65DBD /* Audio Files */,
 				81C54B5D28D9089A00C3EC82 /* AppDelegate.swift */,
 				81C54B5F28D9089A00C3EC82 /* SceneDelegate.swift */,
 				81C54B6128D9089A00C3EC82 /* ViewController.swift */,
@@ -144,7 +181,16 @@
 			files = (
 				81C54B6A28D9089B00C3EC82 /* LaunchScreen.storyboard in Resources */,
 				81C54B6728D9089B00C3EC82 /* Assets.xcassets in Resources */,
+				81AB2DB1291D847900D65DBD /* Tapes 'n Tapes - Crazy Eights.mp3 in Resources */,
+				81AB2DB5291D84FB00D65DBD /* Devo - Gut Feeling_(Slap Your Mammy).mp3 in Resources */,
+				81AB2DB9291D859A00D65DBD /* The Sex Pistols - Pretty Vacant.mp3 in Resources */,
+				81AB2DBD291D864100D65DBD /* 07 - Staring at the Sun.mp3 in Resources */,
+				81C79CCB291ACF08007ABD0C /* Swearin' - Kenosha.mp3 in Resources */,
 				81C54B6528D9089A00C3EC82 /* Main.storyboard in Resources */,
+				81C79CCD291AD697007ABD0C /* Ted Leo and The Pharmacists - Bottled in Cork.mp3 in Resources */,
+				81AB2DB7291D852600D65DBD /* 03 - Magic Hour.mp3 in Resources */,
+				81AB2DBB291D860700D65DBD /* Tortoise - Tin Cans & Twine.mp3 in Resources */,
+				81AB2DB3291D84A800D65DBD /* The Coathangers - Copycat.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +351,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PickerApp/PickerApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D9TZTLV9Q2;
@@ -333,6 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PickerApp/PickerApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D9TZTLV9Q2;

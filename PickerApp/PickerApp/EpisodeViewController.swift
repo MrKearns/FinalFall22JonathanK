@@ -7,6 +7,16 @@
 
 import UIKit
 import ColorKit
+import AVFoundation
+
+// ----- PUBLIC VARS -----
+
+var primaryColor: UIColor?
+var secondaryColor: UIColor?
+var tertiaryColor: UIColor?
+
+
+    // ---------------------- VIEW CONTROLLER ----------------------
 
 class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -15,7 +25,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var topLabel: UILabel!
     
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var episodedTable: UITableView!
+    @IBOutlet weak var episodesTable: UITableView!
     @IBOutlet weak var sortEpisodesButton: UIButton!
     
     var episodesArray: [Episode] = []
@@ -27,6 +37,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     var podcastDiscription = String()
     
     var coverImageToGetAverageColor: UIImageView!
+    var audioFileToSend: String = ""
     
     
     
@@ -49,6 +60,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         sortEpisodeButtonPressed()
         
         
+        
         // Do any additional setup after loading the view.
     }
     
@@ -60,7 +72,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: TableViewCell = tableView.dequeueReusableCell(withIdentifier: "episodesCell") as! TableViewCell
+        let cell: TableViewCell = tableView.dequeueReusableCell(withIdentifier: "episodesCell") as! TableViewCell
         
         cell.backgroundColor = UIColor.lightGray
         cell.episodeTitle?.text = episodesArray[indexPath.row].name
@@ -70,6 +82,15 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    
+//    ----- DID SELECT ROW -----
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        audioFileToSend = allEpisodesArray[indexPath.row].audioFile
+        performSegue(withIdentifier: "segueToPlayer", sender: self)
+    }
+    
+    
+//    ----- TRAILING SWIPE ACTION -----
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let markAsPlayed = UIContextualAction(style: .normal, title: "Played") {
             (contextualAction, view, boolValue) in
@@ -79,6 +100,15 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         let swipeActions = UISwipeActionsConfiguration(actions: [markAsPlayed])
         return swipeActions
         
+    }
+    
+    
+//    -------------------- PREPARE FOR SEGUE -------------------
+    
+    override func prepare(for segueToPlayer: UIStoryboardSegue, sender: Any?) {
+        let playerController = segueToPlayer.destination as! PlayerViewController
+        
+        playerController.podcastAudioFile = audioFileToSend
     }
 
     
@@ -90,15 +120,15 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         let this = { [self](action: UIAction) in
             if action.title == "Unplayed"{
                 self.episodesArray = self.unplayedEpisodesArray
-                episodedTable.reloadData()
+                episodesTable.reloadData()
             }
             if action.title == "All"{
                 self.episodesArray = self.allEpisodesArray
-                episodedTable.reloadData()
+                episodesTable.reloadData()
             }
             if action.title == "Played"{
                 self.episodesArray = self.playedEpisodesArray
-                episodedTable.reloadData()
+                episodesTable.reloadData()
             }
             print(action.title)}
     
@@ -110,13 +140,16 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-//    -------------------- GET COLORS FROM IMAGE FUNCTINO ----------------
+//    -------------------- GET COLORS FROM IMAGE FUNCTION ----------------
     
     func getImageAverageColor(){
         do{
             let averageColor = try coverImageToGetAverageColor.image?.dominantColors()
             view.backgroundColor = averageColor![0]
+            primaryColor = averageColor![0]
             topLabel.textColor = averageColor![1]
+            secondaryColor = averageColor![1]
+            tertiaryColor = averageColor![2]
             descriptionLabel.textColor = averageColor![1]
             sortEpisodesButton.setTitleColor(averageColor![1], for: .normal)
         }
